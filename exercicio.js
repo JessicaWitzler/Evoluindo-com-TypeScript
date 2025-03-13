@@ -17,12 +17,12 @@ console.log(multiplicar(-3, 7));
 // Exercício 3
 // Função genérica 
 function inverterArray(arr) {
-    return arr.reverse(); // Usa o método reverse para inverter o array
+    return arr.reverse();
 }
 // Testando a função
 var numeros = [1, 2, 3, 4, 5];
 var numerosInvertidos = inverterArray(numeros);
-console.log(numerosInvertidos); // Resultado: [5, 4, 3, 2, 1]
+console.log(numerosInvertidos);
 var palavras = ['maça', 'banana', 'pera'];
 var palavrasInvertidas = inverterArray(palavras);
 console.log(palavrasInvertidas);
@@ -43,3 +43,27 @@ var repositorio = new RepositorioUsuario();
 repositorio.salvar({ nome: 'João', email: 'joao@example.com' });
 repositorio.salvar({ nome: 'Maria', email: 'maria@example.com' });
 console.log(repositorio.obterTodos());
+function processarResposta(resposta) {
+    if (typeof resposta === 'string') {
+        console.log("Resposta recebida como string: ".concat(resposta));
+    }
+    else if (typeof resposta === 'boolean') {
+        if (resposta) {
+            console.log('Resposta recebida como booleano: verdadeiro');
+        }
+        else {
+            console.log('Resposta recebida como booleano: falso');
+        }
+    }
+}
+// Testa a função com diferentes valores
+processarResposta('Operação concluída com sucesso');
+processarResposta(true);
+processarResposta(false);
+var estudanteTrabalhador = {
+    nome: 'Lucas Silva',
+    curso: 'Engenharia de Software',
+    empresa: 'Tech Solutions',
+    cargo: 'Desenvolvedor Júnior'
+};
+console.log(estudanteTrabalhador);

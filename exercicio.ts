@@ -86,3 +86,50 @@ repositorio.salvar({ nome: 'Maria', email: 'maria@example.com' });
   
 console.log(repositorio.obterTodos());
 
+// Exercicio 5
+
+// Criando RespostaServidor
+type RespostaServidor = string | boolean;
+
+function processarResposta(resposta: RespostaServidor): void {
+  if (typeof resposta === 'string') {
+    console.log(`Resposta recebida como string: ${resposta}`);
+  } else if (typeof resposta === 'boolean') {
+    if (resposta) {
+      console.log('Resposta recebida como booleano: verdadeiro');
+    } else {
+      console.log('Resposta recebida como booleano: falso');
+    }
+  }
+}
+
+// Testa a função com diferentes valores
+processarResposta('Operação concluída com sucesso');
+processarResposta(true); 
+processarResposta(false);
+
+// Exercício 6
+
+// Tipo Estudante
+interface Estudante {
+    nome: string;
+    curso: string;
+}
+  
+// Tipo Trabalhador
+interface Trabalhador {
+    empresa: string;
+    cargo: string;
+}
+  
+// Intersection Type 
+type EstudanteTrabalhador = Estudante & Trabalhador;
+  
+const estudanteTrabalhador: EstudanteTrabalhador = {
+    nome: 'Lucas Silva',
+    curso: 'Engenharia de Software',
+    empresa: 'Tech Solutions',
+    cargo: 'Desenvolvedor Júnior'
+}
+  
+console.log(estudanteTrabalhador);
